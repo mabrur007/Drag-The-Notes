@@ -3,3 +3,7 @@
 *{
     font-family: 'Poppins', sans-serif;
 }
+
+::selection{
+    color: rgb(232, 145, 47);
+}
