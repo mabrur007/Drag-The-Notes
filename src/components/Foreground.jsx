@@ -1,11 +1,10 @@
+import Card from "./Card"
 
 function Foreground() {
   return (
     <div>
           <div className='fixed w-full h-full top-0 left-0 z-[2]'>
-              <div className=" w-52 h-64 bg-blue-600/40">
-                  
-              </div>
+              <Card />
           </div>
     </div>
   )
