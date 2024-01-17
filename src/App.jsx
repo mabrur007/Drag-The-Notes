@@ -1,9 +1,12 @@
+import './app.css'
 
 function App() {
 
   return (
     <>
-      <h1 className='text-blue-600 text-4xl text-center'>Drag The Notes</h1>
+      <div className="relative w-full h-screen bg-zinc-800">
+        <h1 className='text-zinc-900 font-semibold text-[14vw] leading-none tracking-tight absolute top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%]'>Docs.</h1>
+      </div>
     </>
   )
 }
