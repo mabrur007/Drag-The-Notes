@@ -1,10 +1,11 @@
 import { FaRegFileAlt } from "react-icons/fa";
 import { LuDownload } from "react-icons/lu";
 import { IoClose } from "react-icons/io5";
+import { motion } from "framer-motion"
 
 function Card({ data }) {
   return (
-    <div className="relative overflow-hidden w-60 h-72 rounded-[40px] px-5 py-10 bg-zinc-900/90 text-white shrink-0">
+    <motion.div drag className="relative overflow-hidden w-60 h-72 rounded-[40px] px-5 py-10 bg-zinc-900/80 text-white shrink-0">
       <FaRegFileAlt />
       <p className="mt-4 text-sm w-[90%]">{data.bodyText}</p>
 
@@ -16,13 +17,13 @@ function Card({ data }) {
           </span>
         </div>
         {data.tag.isOpen && (
-          <div className="tag w-full bg-green-600 py-4">
+          <div className={`tag w-full ${data.tag.tagColor === "green" ? "bg-green-600" : "bg-blue-600"} py-4`}>
             <h3 className="text-center text-sm ">{data.tag.tagTitle}</h3>
           </div>
         )}
         
       </div>
-    </div>
+    </motion.div>
   )
 }
 

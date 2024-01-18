@@ -17,25 +17,25 @@ function Foreground() {
       fileSize: ".9mb",
       close: true,
       tag: {
-        isOpen: false,
+        isOpen: true,
         tagTitle: "Download Now",
-        tagColor: "green",
+        tagColor: "blue",
       },
     },
     {
       bodyText: "I am changing the text using props drilling from Foreground to Card Component 3",
       fileSize: ".5mb",
-      close: false,
+      close: true,
       tag: {
         isOpen: true,
-        tagTitle: "Download Now",
+        tagTitle: "Upload",
         tagColor: "green",
       },
     },
   ]
   return (
     <div>
-          <div className='fixed w-full h-full top-0 left-0 z-[2] p-10 flex flex-wrap gap-10'>
+          <div className='fixed w-full h-full top-0 left-0 z-[2] p-6 flex flex-wrap gap-10'>
             {
               data.map((item, i) => (
                 <Card data={item} key={i}/>
