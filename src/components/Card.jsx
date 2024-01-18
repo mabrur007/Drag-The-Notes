@@ -3,9 +3,9 @@ import { LuDownload } from "react-icons/lu";
 import { IoClose } from "react-icons/io5";
 import { motion } from "framer-motion"
 
-function Card({ data }) {
+function Card({ data, constrainsRef }) {
   return (
-    <motion.div drag className="relative overflow-hidden w-60 h-72 rounded-[40px] px-5 py-10 bg-zinc-900/80 text-white shrink-0">
+    <motion.div drag dragConstraints={constrainsRef} whileDrag={{ scale: 1.1 }} className="relative overflow-hidden w-60 h-72 rounded-[40px] px-5 py-10 bg-zinc-900/80 text-white shrink-0">
       <FaRegFileAlt />
       <p className="mt-4 text-sm w-[90%]">{data.bodyText}</p>
 
